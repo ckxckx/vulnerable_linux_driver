@@ -25,4 +25,7 @@
 	#define ARBITRARY_RW_WRITE _IOR(IOCTL_NUM, 11, unsigned long)
 	#define UNINITIALISED_STACK_ALLOC _IOR(IOCTL_NUM, 12, unsigned long)
 	#define UNINITIALISED_STACK_USE _IOR(IOCTL_NUM, 13, unsigned long)
+
+	//ckx
+	#define CKX_TRIGGER_BACKDOOR _IO(IOCTL_NUM,14)
 #endif

