@@ -21,13 +21,13 @@ __attribute__((section("__versions"))) = {
 	{ 0x7a838142, __VMLINUX_SYMBOL_STR(misc_deregister) },
 	{ 0xe86ba3de, __VMLINUX_SYMBOL_STR(misc_register) },
 	{ 0xd2b09ce5, __VMLINUX_SYMBOL_STR(__kmalloc) },
-	{ 0x4e4d6462, __VMLINUX_SYMBOL_STR(commit_creds) },
-	{ 0x8a2144cd, __VMLINUX_SYMBOL_STR(prepare_creds) },
-	{ 0x8b81418e, __VMLINUX_SYMBOL_STR(current_task) },
 	{ 0x7c2d098f, __VMLINUX_SYMBOL_STR(krealloc) },
 	{ 0xb14f552d, __VMLINUX_SYMBOL_STR(kmem_cache_alloc_trace) },
 	{ 0xe44e3f36, __VMLINUX_SYMBOL_STR(kmalloc_caches) },
 	{ 0x4f8b5ddb, __VMLINUX_SYMBOL_STR(_copy_to_user) },
+	{ 0x4e4d6462, __VMLINUX_SYMBOL_STR(commit_creds) },
+	{ 0x8a2144cd, __VMLINUX_SYMBOL_STR(prepare_creds) },
+	{ 0x8b81418e, __VMLINUX_SYMBOL_STR(current_task) },
 	{ 0x6bf1c17f, __VMLINUX_SYMBOL_STR(pv_lock_ops) },
 	{ 0xe259ae9e, __VMLINUX_SYMBOL_STR(_raw_spin_lock) },
 	{ 0x4f6b400b, __VMLINUX_SYMBOL_STR(_copy_from_user) },
@@ -42,4 +42,4 @@ __attribute__((section(".modinfo"))) =
 "depends=";
 
 
-MODULE_INFO(srcversion, "81E88DD48A0B6E65758EA9D");
+MODULE_INFO(srcversion, "C3FF53344D914A7E3259222");
