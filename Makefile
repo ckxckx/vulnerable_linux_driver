@@ -8,10 +8,11 @@ clean:
 	rm -rf src/*.mod
 	rm -rf src/*.mod.*
 	rm -rf src/*.o
-	rm .tmp_versions/vuln_driver.mod
-	rm src/.vuln_driver.ko.cmd
-	rm src/.vuln_driver.mod.o.cmd
-	rm src/.vuln_driver.o.cmd
-	rm Module.symvers
-	rm modules.order
+	rm -rf .tmp_versions/vuln_driver.mod
+	rm -rf src/.vuln_driver.ko.cmd
+	rm -rf src/.vuln_driver.mod.o.cmd
+	rm -rf src/.vuln_driver.o.cmd
+	rm -rf src/*.o.*
+	rm -rf Module.symvers
+	rm -rf modules.order
 
