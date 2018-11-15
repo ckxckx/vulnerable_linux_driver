@@ -1,1 +1,0 @@
-cmd_/home/ckx/vulnerable_linux_driver/src/vuln_driver.ko := ld -r -m elf_x86_64 -T ./scripts/module-common.lds --build-id  -o /home/ckx/vulnerable_linux_driver/src/vuln_driver.ko /home/ckx/vulnerable_linux_driver/src/vuln_driver.o /home/ckx/vulnerable_linux_driver/src/vuln_driver.mod.o
